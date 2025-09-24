@@ -1,0 +1,41 @@
+public class LinearSearch {
+
+    /**
+     * Performs a linear search to find a target number in an integer array.
+     *
+     * @param arr The array to search within.
+     * @param target The number to find.
+     * @return The index of the target number if found, otherwise -1.
+     */
+    public static int linearSearch(int[] arr, int target) {
+        // Iterate through each element of the array
+        for (int i = 0; i < arr.length; i++) {
+            // If the current element matches the target, return its index
+            if (arr[i] == target) {
+                return i;
+            }
+        }
+        // If the loop completes without finding the target, return -1
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 25, 5, 40, 15, 30};
+        int target1 = 15;
+        int target2 = 50;
+
+        int index1 = linearSearch(numbers, target1);
+        if (index1 != -1) {
+            System.out.println("Number " + target1 + " found at index: " + index1);
+        } else {
+            System.out.println("Number " + target1 + " not found in the array.");
+        }
+
+        int index2 = linearSearch(numbers, target2);
+        if (index2 != -1) {
+            System.out.println("Number " + target2 + " found at index: " + index2);
+        } else {
+            System.out.println("Number " + target2 + " not found in the array.");
+        }
+    }
+}
